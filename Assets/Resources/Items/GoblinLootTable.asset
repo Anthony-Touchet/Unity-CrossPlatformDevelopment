@@ -11,4 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b22c55e27a1ffc8458d5539a90b46164, type: 3}
   m_Name: GoblinLootTable
   m_EditorClassIdentifier: 
-  itemChancesList: []
+  itemChancesList:
+  - item: {fileID: 11400000, guid: 519d35d9ee9006744bf4c8321867a336, type: 2}
+    minChance: 0
+    maxChance: 10
+  - item: {fileID: 11400000, guid: 74e96f62622c4d64f93b70669304b2ee, type: 2}
+    minChance: 36
+    maxChance: 56
+  - item: {fileID: 11400000, guid: fd7988ee97432e041b6f164ebf62b9cd, type: 2}
+    minChance: 64
+    maxChance: 74

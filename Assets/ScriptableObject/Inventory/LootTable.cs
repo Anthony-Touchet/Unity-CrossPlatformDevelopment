@@ -19,18 +19,18 @@ public class LootTable : ScriptableObject {
 
     public List<ItemChance> itemChancesList;
 
-    public void DropLoot()
+    public Item DropLoot()
     {
-        Debug.Log("Loot Dropped");
-
         var chance = UnityEngine.Random.Range(0, 100);
 
         foreach (var i in itemChancesList)
         {
             if (chance < i.minChance || chance > i.maxChance) continue;
             Debug.Log(i.item._itemName);
-            //break;    If Want only one item to drop, Uncomment
+            return i.item; //If Want only one item to drop, Uncomment
         }
+        Debug.Log("No Loot");
+        return null;
     }
 
 #if UNITY_EDITOR
