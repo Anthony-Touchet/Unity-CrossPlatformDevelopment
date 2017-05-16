@@ -22,12 +22,19 @@ public class LootTableMono : MonoBehaviour
     [ContextMenu("Drop Loot")]
     public void DropLoot()
     {
-        var item = lootTable.DropLoot();
-        if (item == null)
+        var items = lootTable.DropLoot();
+        if (items == null)
+        {
+            Debug.Log("No Items");
             return;
+        }
 
-        var itemObject = Instantiate(itemPrefab, transform.position, transform.rotation);
-        var itemBehavior = itemObject.GetComponent<ItemBehaviour>();
-        itemBehavior.item_config = item;
+        foreach (var item in items)
+        {
+            Debug.Log(item._itemName);
+            var itemObject = Instantiate(itemPrefab, transform.position, transform.rotation);
+            var itemBehavior = itemObject.GetComponent<ItemBehaviour>();
+            itemBehavior.item_config = item;
+        }
     }
 }
