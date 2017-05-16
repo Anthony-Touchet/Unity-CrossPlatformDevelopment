@@ -23,7 +23,7 @@ public class LootTableMono : MonoBehaviour
     public void DropLoot()
     {
         var items = lootTable.DropLoot();
-        if (items == null)
+        if (items == null || items.Count == 0)
         {
             Debug.Log("No Items");
             return;

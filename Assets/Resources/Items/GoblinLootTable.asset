@@ -13,11 +13,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemChancesList:
   - item: {fileID: 11400000, guid: 519d35d9ee9006744bf4c8321867a336, type: 2}
-    minChance: 0
+    minChance: 100
     maxChance: 100
   - item: {fileID: 11400000, guid: 74e96f62622c4d64f93b70669304b2ee, type: 2}
-    minChance: 0
+    minChance: 100
     maxChance: 100
   - item: {fileID: 11400000, guid: fd7988ee97432e041b6f164ebf62b9cd, type: 2}
-    minChance: 0
+    minChance: 100
     maxChance: 100
